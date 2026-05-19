@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InventarisBukuWindow</class>
+ <widget class="QMainWindow" name="InventarisBukuWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inventaris Buku Mini</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+QMainWindow {
+    background:#000000;
+}
+
+QWidget {
+    background:#000000;
+    color:white;
+    font-family:'Segoe UI';
+    font-size:10pt;
+}
+
+QFrame#cardLeft, QFrame#cardRight {
+    background:#16181C;
+    border:1px solid #2F3336;
+    border-radius:18px;
+}
+
+QLabel#lblJudul {
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+QLabel#lblSub {
+    color:#71767B;
+    font-size:11pt;
+}
+
+QLabel {
+    color:#E7E9EA;
+}
+
+QLineEdit,
+QComboBox,
+QSpinBox,
+QDateEdit {
+    background:#000000;
+    border:1px solid #2F3336;
+    border-radius:10px;
+    padding:10px;
+    color:white;
+    min-height:20px;
+}
+
+QLineEdit:focus,
+QComboBox:focus,
+QSpinBox:focus,
+QDateEdit:focus {
+    border:2px solid #1D9BF0;
+}
+
+QPushButton {
+    border:none;
+    border-radius:16px;
+    padding:12px;
+    font-weight:700;
+}
+
+QPushButton#btnSimpan {
+    background:#1D9BF0;
+    color:white;
+}
+
+QPushButton#btnSimpan:hover {
+    background:#1785D1;
+}
+
+QPushButton#btnUbah {
+    background:#FFD400;
+    color:black;
+}
+
+QPushButton#btnHapus {
+    background:#F4212E;
+    color:white;
+}
+
+QPushButton#btnBersihkan,
+QPushButton#btnCari,
+QPushButton#btnResetCari {
+    background:#EFF3F4;
+    color:black;
+}
+
+QTableWidget {
+    background:#000000;
+    border:1px solid #2F3336;
+    border-radius:12px;
+    gridline-color:#2F3336;
+    color:white;
+}
+
+QHeaderView::section {
+    background:#16181C;
+    color:white;
+    border:none;
+    padding:10px;
+    font-weight:700;
+}
+
+  </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QLabel" name="lblJudul">
+      <property name="text">
+       <string>Inventaris Buku Mini</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblSub">
+      <property name="text">
+       <string>Manage your book inventory in ngawi library📚</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QFrame" name="cardLeft">
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLineEdit" name="txtKode">
+           <property name="placeholderText">
+            <string>Kode Buku</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtJudul">
+           <property name="placeholderText">
+            <string>Judul Buku</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cmbKategori"/>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spnStok"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtLokasi">
+           <property name="placeholderText">
+            <string>Lokasi Rak</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dtMasuk">
+           <property name="displayFormat">
+            <string>yyyy-MM-dd</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnSimpan">
+           <property name="text">
+            <string>Simpan</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnUbah">
+           <property name="text">
+            <string>Ubah</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnHapus">
+           <property name="text">
+            <string>Hapus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnBersihkan">
+           <property name="text">
+            <string>Bersihkan</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="cardRight">
+        <layout class="QVBoxLayout">
+         <item>
+          <layout class="QHBoxLayout">
+           <item>
+            <widget class="QLineEdit" name="txtCari">
+             <property name="placeholderText">
+              <string>Cari buku...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnCari">
+             <property name="text">
+              <string>Cari</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnResetCari">
+             <property name="text">
+              <string>Reset</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tblBuku"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout">
+           <item>
+            <widget class="QLabel" name="lblStatus">
+             <property name="text">
+              <string>Status Ready</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblTotalStok">
+             <property name="text">
+              <string>Total stok: 0</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignRight</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1036</width>
+    <height>732</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ngawi Empire Login</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow {
+    background-color: #000000;
+}
+
+QWidget {
+    background-color: #000000;
+    color: white;
+    font-family: Segoe UI;
+}
+
+QFrame#loginCard {
+    background-color: #16181C;
+    border: 1px solid #2F3336;
+    border-radius: 18px;
+}
+
+QLabel#title {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+QLabel#subtitle {
+    color: #71767B;
+    font-size: 11pt;
+}
+
+QLineEdit {
+    background-color: #000000;
+    border: 1px solid #2F3336;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 11pt;
+    color: white;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1D9BF0;
+}
+
+QPushButton {
+    background-color: #EFF3F4;
+    color: black;
+    border: none;
+    border-radius: 18px;
+    padding: 12px;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #D7DBDC;
+}
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="loginCard">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>120</y>
+      <width>390</width>
+      <height>430</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="title">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>291</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ngawi Library</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="usernameInput">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>140</y>
+       <width>290</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Phone, email, or username</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="passwordInput">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>210</y>
+       <width>290</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="loginButton">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>290</y>
+       <width>290</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sign in</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSignup">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>360</y>
+       <width>230</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#71767B;</string>
+     </property>
+     <property name="text">
+      <string>Don't have an account? Sign up</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1036</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
