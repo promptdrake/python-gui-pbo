@@ -60,7 +60,7 @@ class LoginApp(QMainWindow):
 
 
 
-
+# dinggo load folder ui inventaris buku
 class InventarisBukuApp(QMainWindow):
     """Aplikasi CRUD sederhana untuk materi Form dan Database PyQt6."""
 
