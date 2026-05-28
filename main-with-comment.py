@@ -1,3 +1,5 @@
+
+# pyqt6 dinggo load folder ui
 from __future__ import annotations
 
 import sys
